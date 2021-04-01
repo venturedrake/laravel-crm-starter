@@ -1,9 +1,13 @@
-<div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-    <div>
-        {{ $logo }}
-    </div>
+<div class="container">
+    <div class="row justify-content-center my-5">
+        <div class="col-sm-12 col-md-8 col-lg-5 my-4">
+            <div>
+                {{ $logo }}
+            </div>
 
-    <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
-        {{ $slot }}
+            <div class="card shadow-sm px-1 mx-4">
+                {{ $slot }}
+            </div>
+        </div>
     </div>
 </div>
