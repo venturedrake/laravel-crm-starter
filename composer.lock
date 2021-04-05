@@ -2028,16 +2028,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v2.4.1",
+            "version": "v2.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "b0cb782674673a67ddfd5910d2fcb5308bb32857"
+                "reference": "2495387841a3eb03ac62b2c984ccd2574303285b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/b0cb782674673a67ddfd5910d2fcb5308bb32857",
-                "reference": "b0cb782674673a67ddfd5910d2fcb5308bb32857",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/2495387841a3eb03ac62b2c984ccd2574303285b",
+                "reference": "2495387841a3eb03ac62b2c984ccd2574303285b",
                 "shasum": ""
             },
             "require": {
@@ -2088,7 +2088,7 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v2.4.1"
+                "source": "https://github.com/livewire/livewire/tree/v2.4.2"
             },
             "funding": [
                 {
@@ -2096,7 +2096,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-03-22T14:03:36+00:00"
+            "time": "2021-04-04T15:46:50+00:00"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -6290,16 +6290,16 @@
         },
         {
             "name": "venturedrake/laravel-crm",
-            "version": "0.1.4",
+            "version": "0.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/venturedrake/laravel-crm.git",
-                "reference": "4e8d29d5541b955d60eec5e1ef93d14bc42e0357"
+                "reference": "f1206cd794bc700bec6ff593fc9d4fde76655110"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/venturedrake/laravel-crm/zipball/4e8d29d5541b955d60eec5e1ef93d14bc42e0357",
-                "reference": "4e8d29d5541b955d60eec5e1ef93d14bc42e0357",
+                "url": "https://api.github.com/repos/venturedrake/laravel-crm/zipball/f1206cd794bc700bec6ff593fc9d4fde76655110",
+                "reference": "f1206cd794bc700bec6ff593fc9d4fde76655110",
                 "shasum": ""
             },
             "require": {
@@ -6333,7 +6333,8 @@
             "autoload": {
                 "psr-4": {
                     "VentureDrake\\LaravelCrm\\": "src/",
-                    "VentureDrake\\LaravelCrm\\Database\\Factories\\": "database/factories"
+                    "VentureDrake\\LaravelCrm\\Database\\Factories\\": "database/factories",
+                    "VentureDrake\\LaravelCrm\\Database\\Seeders\\": "database/seeders"
                 },
                 "files": [
                     "src/Http/Helpers/SelectOptions.php",
@@ -6377,7 +6378,7 @@
             ],
             "support": {
                 "issues": "https://github.com/venturedrake/laravel-crm/issues",
-                "source": "https://github.com/venturedrake/laravel-crm/tree/0.1.4"
+                "source": "https://github.com/venturedrake/laravel-crm/tree/0.1.5"
             },
             "funding": [
                 {
@@ -6385,7 +6386,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-04-01T06:03:06+00:00"
+            "time": "2021-04-01T07:03:59+00:00"
         },
         {
             "name": "venturedrake/laravel-encryptable",
@@ -7749,16 +7750,16 @@
         },
         {
             "name": "nascent-africa/jetstrap",
-            "version": "2.2.5",
+            "version": "v2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nascent-africa/jetstrap.git",
-                "reference": "64aea37eee392c91c4aa4f069ab43339f80d87ef"
+                "reference": "623898436a808b9ce967543a8deddb984afeb314"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nascent-africa/jetstrap/zipball/64aea37eee392c91c4aa4f069ab43339f80d87ef",
-                "reference": "64aea37eee392c91c4aa4f069ab43339f80d87ef",
+                "url": "https://api.github.com/repos/nascent-africa/jetstrap/zipball/623898436a808b9ce967543a8deddb984afeb314",
+                "reference": "623898436a808b9ce967543a8deddb984afeb314",
                 "shasum": ""
             },
             "require": {
@@ -7785,7 +7786,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "NascentAfrica\\Jetstrap\\": "src/Jetstrap/"
+                    "NascentAfrica\\Jetstrap\\": "src/NascentAfrica/Jetstrap/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -7809,7 +7810,7 @@
                 "issues": "https://github.com/nascent-africa/jetstrap/issues",
                 "source": "https://github.com/nascent-africa/jetstrap"
             },
-            "time": "2021-03-29T22:52:03+00:00"
+            "time": "2021-04-04T13:48:21+00:00"
         },
         {
             "name": "nunomaduro/collision",
@@ -8292,16 +8293,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "0.12.82",
+            "version": "0.12.83",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "3920f0fb0aff39263d3a4cb0bca120a67a1a6a11"
+                "reference": "4a967cec6efb46b500dd6d768657336a3ffe699f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/3920f0fb0aff39263d3a4cb0bca120a67a1a6a11",
-                "reference": "3920f0fb0aff39263d3a4cb0bca120a67a1a6a11",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/4a967cec6efb46b500dd6d768657336a3ffe699f",
+                "reference": "4a967cec6efb46b500dd6d768657336a3ffe699f",
                 "shasum": ""
             },
             "require": {
@@ -8332,7 +8333,7 @@
             "description": "PHPStan - PHP Static Analysis Tool",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan/issues",
-                "source": "https://github.com/phpstan/phpstan/tree/0.12.82"
+                "source": "https://github.com/phpstan/phpstan/tree/0.12.83"
             },
             "funding": [
                 {
@@ -8348,7 +8349,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-03-19T06:08:17+00:00"
+            "time": "2021-04-03T15:35:45+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
