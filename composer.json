@@ -32,6 +32,7 @@
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.5",
         "livewire/livewire": "^2.0",
+        "rachidlaasri/laravel-installer": "^4.1",
         "venturedrake/laravel-crm": "^0.1.4"
     },
     "require-dev": {
