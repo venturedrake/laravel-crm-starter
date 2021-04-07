@@ -12,7 +12,7 @@ return [
     'back' => 'Previous',
     'finish' => 'Install',
     'forms' => [
-        'errorTitle' => 'The Following errors occurred:',
+        'errorTitle' => 'Errors',
     ],
 
     /*
@@ -114,16 +114,16 @@ return [
 
                 'app_tabs' => [
                     'more_info' => 'More Info',
-                    'broadcasting_title' => 'Broadcasting, Caching, Session, &amp; Queue',
+                    'broadcasting_title' => 'Broadcasting, Caching, Session, & Queue',
                     'broadcasting_label' => 'Broadcast Driver',
                     'broadcasting_placeholder' => 'Broadcast Driver',
                     'cache_label' => 'Cache Driver',
                     'cache_placeholder' => 'Cache Driver',
                     'session_label' => 'Session Driver',
                     'session_placeholder' => 'Session Driver',
-                    'queue_label' => 'Queue Driver',
-                    'queue_placeholder' => 'Queue Driver',
-                    'redis_label' => 'Redis Driver',
+                    'queue_label' => 'Queue Connection',
+                    'queue_placeholder' => 'Queue Connection',
+                    'redis_label' => 'Redis',
                     'redis_host' => 'Redis Host',
                     'redis_password' => 'Redis Password',
                     'redis_port' => 'Redis Port',
