@@ -32,8 +32,9 @@
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.5",
         "livewire/livewire": "^2.0",
-        "venturedrake/laravel-installer": "dev-master",
-        "venturedrake/laravel-crm": "^0.1.4"
+        "spatie/laravel-permission": "^4.0",
+        "venturedrake/laravel-crm": "^0.2",
+        "venturedrake/laravel-installer": "dev-master"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
