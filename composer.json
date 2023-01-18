@@ -1,9 +1,36 @@
 {
-    "name": "laravel/laravel",
-    "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "name": "venturedrake/laravel-crm",
+    "description": "Install and setup a complete Laravel CRM application",
+    "keywords": [
+        "venturedrake",
+        "laravel",
+        "free crm",
+        "open source crm",
+        "CRM",
+        "laravel-crm",
+        "laravel crm",
+        "laravel crm package",
+        "contact management",
+        "contact management system",
+        "customer management",
+        "customer relationship management",
+        "lead management",
+        "sales management",
+        "crm system",
+        "crm online",
+        "crm platform"
+    ],
+    "homepage": "https://github.com/venturedrake/laravel-crm",
     "license": "MIT",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Andrew Drake",
+            "email": "andrew@venturedrake.com",
+            "homepage": "https://venturedrake.com",
+            "role": "Developer"
+        }
+    ],
     "require": {
         "php": "^8.0.2",
         "guzzlehttp/guzzle": "^7.2",
