@@ -1,6 +1,8 @@
 # Laravel CRM Starter
 
-A complete starter project for the [laravel crm package](https://github.com/venturedrake/laravel-crm).
+A complete starter project for the [Laravel CRM Package](https://github.com/venturedrake/laravel-crm). 
+
+This project uses the Laravel 9 with the starter kit [Laravel Breeze](https://laravel.com/docs/9.x/starter-kits#laravel-breeze).
 
 # Requirements
 
@@ -36,20 +38,20 @@ All the relevant configuration files should be present in the repo.
 
 ## Complete the installation
 
-Generate an application key
+Generate the application key
 
 ```
 php artisan key:generate
-```
-
-Install Laravel CRM
-
-```
-php artisan laravelcrm:install
 ```
 
 Link the storage directory
 
 ```
 php artisan storage:link
+```
+
+Install Laravel CRM
+
+```
+php artisan laravelcrm:install
 ```
