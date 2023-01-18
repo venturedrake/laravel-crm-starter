@@ -36,6 +36,12 @@ All the relevant configuration files should be present in the repo.
 
 ## Complete the installation
 
+Generate an application key
+
+```
+php artisan key:generate
+```
+
 Install Laravel CRM
 
 ```
