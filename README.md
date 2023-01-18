@@ -2,7 +2,7 @@
 
 A complete starter project for the [Laravel CRM Package](https://github.com/venturedrake/laravel-crm). 
 
-This project uses the Laravel 9 with the starter kit [Laravel Breeze](https://laravel.com/docs/9.x/starter-kits#laravel-breeze).
+This project uses Laravel 9 with the starter kit [Laravel Breeze](https://laravel.com/docs/9.x/starter-kits#laravel-breeze).
 
 # Requirements
 
