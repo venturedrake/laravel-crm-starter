@@ -37,7 +37,7 @@
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
-        "venturedrake/laravel-crm": "dev-master"
+        "venturedrake/laravel-crm": "dev-develop"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -90,5 +90,11 @@
         }
     },
     "minimum-stability": "stable",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../Packages/laravel-crm"
+        }
+    ]
 }

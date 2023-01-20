@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1da392de343b81399433a8edc5b315ef",
+    "content-hash": "a69d76f27da89c210f34d846c955e8d1",
     "packages": [
         {
             "name": "brick/math",
@@ -6802,17 +6802,11 @@
         },
         {
             "name": "venturedrake/laravel-crm",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/venturedrake/laravel-crm.git",
-                "reference": "31c338f5271ab8c25adb6611745ecfbd3eb4aff3"
-            },
+            "version": "dev-develop",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/venturedrake/laravel-crm/zipball/31c338f5271ab8c25adb6611745ecfbd3eb4aff3",
-                "reference": "31c338f5271ab8c25adb6611745ecfbd3eb4aff3",
-                "shasum": ""
+                "type": "path",
+                "url": "../../Packages/laravel-crm",
+                "reference": "728161ead18ad3c7b1a7dcd1ff6dc9c10f02ece6"
             },
             "require": {
                 "cknow/laravel-money": "^4.0|^5.0|^6.0|^7.0",
@@ -6838,7 +6832,6 @@
                 "phpstan/phpstan": "^0.12.65",
                 "phpunit/phpunit": "^8.0|^9.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -6851,19 +6844,37 @@
                 }
             },
             "autoload": {
+                "psr-4": {
+                    "VentureDrake\\LaravelCrm\\": "src/",
+                    "VentureDrake\\LaravelCrm\\Database\\Factories\\": "database/factories",
+                    "VentureDrake\\LaravelCrm\\Database\\Seeders\\": "database/seeders"
+                },
                 "files": [
                     "src/Http/Helpers/SelectOptions.php",
                     "src/Http/Helpers/PersonName.php",
                     "src/Http/Helpers/AddressLine.php",
                     "src/Http/Helpers/AutoComplete.php"
-                ],
+                ]
+            },
+            "autoload-dev": {
                 "psr-4": {
-                    "VentureDrake\\LaravelCrm\\": "src/",
-                    "VentureDrake\\LaravelCrm\\Database\\Seeders\\": "database/seeders",
-                    "VentureDrake\\LaravelCrm\\Database\\Factories\\": "database/factories"
+                    "VentureDrake\\LaravelCRM\\Tests\\": "tests"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpunit --colors=always"
+                ],
+                "test-coverage": [
+                    "vendor/bin/phpunit --coverage-html coverage"
+                ],
+                "format": [
+                    "vendor/bin/php-cs-fixer fix --allow-risky=no"
+                ],
+                "analyse": [
+                    "vendor/bin/phpstan analyse -c phpstan.neon"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -6878,35 +6889,27 @@
             "description": "A free open source CRM built as a package for laravel projects",
             "homepage": "https://github.com/venturedrake/laravel-crm",
             "keywords": [
-                "Customer Relationship Management",
-                "Lead management",
+                "CRM",
                 "contact management",
                 "contact management system",
-                "crm",
                 "crm online",
                 "crm platform",
                 "crm system",
                 "customer management",
+                "customer relationship management",
                 "free crm",
                 "laravel",
                 "laravel crm",
                 "laravel crm package",
                 "laravel-crm",
+                "lead management",
                 "open source crm",
                 "sales management",
                 "venturedrake"
             ],
-            "support": {
-                "issues": "https://github.com/venturedrake/laravel-crm/issues",
-                "source": "https://github.com/venturedrake/laravel-crm/tree/master"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/venturedrake",
-                    "type": "github"
-                }
-            ],
-            "time": "2023-01-18T12:35:23+00:00"
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "venturedrake/laravel-encryptable",
