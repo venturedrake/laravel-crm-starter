@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e7117e21b038eb7ddd7c83d66ccaf464",
+    "content-hash": "1da392de343b81399433a8edc5b315ef",
     "packages": [
         {
             "name": "brick/math",
@@ -2259,16 +2259,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "3.12.1",
+            "version": "3.12.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "b934123c1f11ada6363d057d691e3065fa6d6d49"
+                "reference": "f6377c709d2275ed6feaf63e44be7a7162b0e77f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/b934123c1f11ada6363d057d691e3065fa6d6d49",
-                "reference": "b934123c1f11ada6363d057d691e3065fa6d6d49",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/f6377c709d2275ed6feaf63e44be7a7162b0e77f",
+                "reference": "f6377c709d2275ed6feaf63e44be7a7162b0e77f",
                 "shasum": ""
             },
             "require": {
@@ -2330,7 +2330,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
-                "source": "https://github.com/thephpleague/flysystem/tree/3.12.1"
+                "source": "https://github.com/thephpleague/flysystem/tree/3.12.2"
             },
             "funding": [
                 {
@@ -2346,7 +2346,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-01-06T16:34:48+00:00"
+            "time": "2023-01-19T12:02:19+00:00"
         },
         {
             "name": "league/mime-type-detection",
@@ -6802,16 +6802,16 @@
         },
         {
             "name": "venturedrake/laravel-crm",
-            "version": "0.14.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/venturedrake/laravel-crm.git",
-                "reference": "5115ba8432b470ea1ff2ca595b9e229985b999bb"
+                "reference": "31c338f5271ab8c25adb6611745ecfbd3eb4aff3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/venturedrake/laravel-crm/zipball/5115ba8432b470ea1ff2ca595b9e229985b999bb",
-                "reference": "5115ba8432b470ea1ff2ca595b9e229985b999bb",
+                "url": "https://api.github.com/repos/venturedrake/laravel-crm/zipball/31c338f5271ab8c25adb6611745ecfbd3eb4aff3",
+                "reference": "31c338f5271ab8c25adb6611745ecfbd3eb4aff3",
                 "shasum": ""
             },
             "require": {
@@ -6838,6 +6838,7 @@
                 "phpstan/phpstan": "^0.12.65",
                 "phpunit/phpunit": "^8.0|^9.0"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "laravel": {
@@ -6897,7 +6898,7 @@
             ],
             "support": {
                 "issues": "https://github.com/venturedrake/laravel-crm/issues",
-                "source": "https://github.com/venturedrake/laravel-crm/tree/0.14.0"
+                "source": "https://github.com/venturedrake/laravel-crm/tree/master"
             },
             "funding": [
                 {
@@ -6905,7 +6906,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-01-17T05:47:38+00:00"
+            "time": "2023-01-18T12:35:23+00:00"
         },
         {
             "name": "venturedrake/laravel-encryptable",
@@ -9647,7 +9648,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "venturedrake/laravel-crm": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
