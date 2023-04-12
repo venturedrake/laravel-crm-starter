@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c349d4f9d809ed967915042a609b0b0d",
+    "content-hash": "e049aa3fadbcc20bf102e6186190da88",
     "packages": [
         {
             "name": "barryvdh/laravel-dompdf",
@@ -7247,16 +7247,16 @@
         },
         {
             "name": "venturedrake/laravel-crm",
-            "version": "0.16.0",
+            "version": "0.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/venturedrake/laravel-crm.git",
-                "reference": "7b0ae75bffff0f4e6e43c6a15e373eebd31c2fdc"
+                "reference": "4a9b083ededb35587bb8bc6903fb9b00acfd3af0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/venturedrake/laravel-crm/zipball/7b0ae75bffff0f4e6e43c6a15e373eebd31c2fdc",
-                "reference": "7b0ae75bffff0f4e6e43c6a15e373eebd31c2fdc",
+                "url": "https://api.github.com/repos/venturedrake/laravel-crm/zipball/4a9b083ededb35587bb8bc6903fb9b00acfd3af0",
+                "reference": "4a9b083ededb35587bb8bc6903fb9b00acfd3af0",
                 "shasum": ""
             },
             "require": {
@@ -7343,7 +7343,7 @@
             ],
             "support": {
                 "issues": "https://github.com/venturedrake/laravel-crm/issues",
-                "source": "https://github.com/venturedrake/laravel-crm/tree/0.16.0"
+                "source": "https://github.com/venturedrake/laravel-crm/tree/0.17.0"
             },
             "funding": [
                 {
@@ -7351,7 +7351,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-03-12T12:37:45+00:00"
+            "time": "2023-04-12T07:03:15+00:00"
         },
         {
             "name": "venturedrake/laravel-encryptable",
