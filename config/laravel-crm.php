@@ -13,7 +13,7 @@ return [
     | the crm is installed if not already.
     |
     */
-    
+
     'crm_owner' => env('LARAVEL_CRM_OWNER', ''),
 
     /*
@@ -53,12 +53,22 @@ return [
     | creates a new team when team support is enabled above.
     |
     */
-    
+
     'currency' => env('LARAVEL_CRM_CURRENCY', 'USD'),
-    
+
     'country' => env('LARAVEL_CRM_COUNTRY', 'United States'),
-    
+
     'language' => env('LARAVEL_CRM_LANGUAGE', 'english'),
+
+    'timezone' => env('LARAVEL_CRM_TIMEZONE', 'UTC'),
+
+    'date_format' => env('LARAVEL_CRM_DATE_FORMAT', 'Y-m-d'),
+
+    'time_format' => env('LARAVEL_CRM_TIME_FORMAT', 'g:i A'),
+
+    'tax_name' => env('LARAVEL_CRM_TAX_NAME', 'Tax'),
+
+    'tax_rate' => env('LARAVEL_CRM_TAX_RATE', null),
 
     /*
     |--------------------------------------------------------------------------
@@ -90,7 +100,7 @@ return [
     | controllers, models, views, etc.
     |
     */
-    
+
     'route_prefix' => env('LARAVEL_CRM_ROUTE_PREFIX', 'crm'),
 
     /*
@@ -101,7 +111,7 @@ return [
     | For any custom middleware you have developed to be added to the crm routes
     |
     */
-    
+
     'route_middleware' => [],
 
     /*
@@ -114,7 +124,7 @@ return [
     | as the default "crm" to avoid any possible table name conflicts.
     |
     */
-    
+
     'db_table_prefix' => env('LARAVEL_CRM_DB_TABLE_PREFIX', 'crm_'),
 
     /*
@@ -126,7 +136,7 @@ return [
     | certain database table fields as an added layer of privacy protection.
     |
     */
-    
+
     'encrypt_db_fields' => env('LARAVEL_CRM_ENCRYPT_DB_FIELDS', false),
 
     /*
@@ -143,5 +153,29 @@ return [
     */
 
     'user_interface' => env('LARAVEL_CRM_USER_INTERFACE', true),
-    
+
+    /*
+    |--------------------------------------------------------------------------
+    | Optional Modules
+    |--------------------------------------------------------------------------
+    |
+    | Some of the features of the CRM package be disabled by removing them here
+    | if they are not necessary for the business. An example of the deliveries
+    | model which would not be useful if you sell digital only products or
+    | services.
+    |
+    | Modules: "leads", "deals", "quotes", "orders", "invoices", "deliveries"
+    |
+    */
+
+    'modules' => [
+        'leads',
+        'deals',
+        'quotes',
+        'orders',
+        'invoices',
+        'deliveries',
+        'teams',
+    ],
+
 ];

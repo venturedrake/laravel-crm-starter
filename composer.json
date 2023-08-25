@@ -37,7 +37,7 @@
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
-        "venturedrake/laravel-crm": "^0.18.1"
+        "venturedrake/laravel-crm": "^0.19.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -74,7 +74,12 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
-        ]
+        ],
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "analyse": "vendor/bin/phpstan analyse -c phpstan.neon",
+        "format": "vendor/bin/pint -v",
+        "format-test": "vendor/bin/pint -v --test"
     },
     "extra": {
         "laravel": {
