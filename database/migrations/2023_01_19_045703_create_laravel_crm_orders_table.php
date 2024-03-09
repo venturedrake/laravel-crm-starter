@@ -28,7 +28,7 @@ class CreateLaravelCrmOrdersTable extends Migration
             $table->unsignedBigInteger('organisation_id')->index()->nullable();
             $table->foreign('organisation_id')->references('id')->on(config('laravel-crm.db_table_prefix').'organisations');
             $table->text('description')->nullable();
-            $table->string("currency", 3)->default("USD");
+            $table->string('currency', 3)->default('USD');
             $table->integer('subtotal')->nullable();
             $table->integer('discount')->nullable();
             $table->integer('tax')->nullable();

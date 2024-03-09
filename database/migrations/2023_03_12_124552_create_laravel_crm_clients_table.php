@@ -31,7 +31,7 @@ class CreateLaravelCrmClientsTable extends Migration
             $table->unsignedBigInteger('user_assigned_id')->nullable();
             $table->foreign('user_assigned_id')->references('id')->on('users');
             $table->timestamps();
-            $table->softDeletes();      
+            $table->softDeletes();
         });
     }
 

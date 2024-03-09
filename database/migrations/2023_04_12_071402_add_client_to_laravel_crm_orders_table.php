@@ -15,7 +15,7 @@ class AddClientToLaravelCrmOrdersTable extends Migration
     {
         Schema::table(config('laravel-crm.db_table_prefix').'orders', function (Blueprint $table) {
             $table->foreignIdFor(\VentureDrake\LaravelCrm\Models\Client::class)->after('quote_id')->nullable();
-        });  
+        });
     }
 
     /**
@@ -26,7 +26,7 @@ class AddClientToLaravelCrmOrdersTable extends Migration
     public function down()
     {
         Schema::table(config('laravel-crm.db_table_prefix').'orders', function (Blueprint $table) {
-             $table->dropColumn('client_id');
+            $table->dropColumn('client_id');
         });
     }
 }

@@ -29,7 +29,7 @@ class AddLabelEditableFieldsToLaravelCrmSettingsTable extends Migration
         Schema::table(config('laravel-crm.db_table_prefix').'settings', function (Blueprint $table) {
             $table->dropColumn([
                 'label',
-                'editable'
+                'editable',
             ]);
         });
     }

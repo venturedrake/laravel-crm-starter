@@ -31,8 +31,8 @@ class AddPrefixToLaravelCrmOrdersTable extends Migration
             $table->dropColumn([
                 'order_id',
                 'prefix',
-                'number'
-            ]);     
+                'number',
+            ]);
         });
     }
 }

@@ -14,7 +14,7 @@ class AlterUrlOnLaravelCrmUsageRequestsTable extends Migration
     public function up()
     {
         Schema::table(config('laravel-crm.db_table_prefix').'usage_requests', function (Blueprint $table) {
-              $table->string('url', 2048)->change();
+            $table->string('url', 2048)->change();
         });
     }
 

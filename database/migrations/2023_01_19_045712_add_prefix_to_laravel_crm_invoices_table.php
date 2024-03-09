@@ -32,7 +32,7 @@ class AddPrefixToLaravelCrmInvoicesTable extends Migration
         Schema::table(config('laravel-crm.db_table_prefix').'invoices', function (Blueprint $table) {
             $table->dropColumn([
                 'prefix',
-            ]);     
+            ]);
             $table->renameColumn('number', 'invoice_number');
             $table->text('description')->after('organisation_id')->nullable();
         });

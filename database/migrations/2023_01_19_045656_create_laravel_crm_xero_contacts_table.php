@@ -19,7 +19,7 @@ class CreateLaravelCrmXeroContactsTable extends Migration
             $table->unsignedBigInteger('team_id')->index()->nullable();
             $table->foreignIdFor(\VentureDrake\LaravelCrm\Models\Organisation::class);
             $table->string('contact_id')->nullable();
-            $table->string('name')->nullable(); 
+            $table->string('name')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

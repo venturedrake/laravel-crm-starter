@@ -46,7 +46,7 @@ class CreateLaravelCrmTables extends Migration
             $table->string('last_name')->nullable();
             $table->string('maiden_name')->nullable();
             $table->date('birthday')->nullable();
-            $table->enum('gender', ['male','female'])->nullable();
+            $table->enum('gender', ['male', 'female'])->nullable();
             $table->text('description')->nullable();
             $table->unsignedBigInteger('organisation_id')->nullable();
             $table->foreign('organisation_id')->references('id')->on(config('laravel-crm.db_table_prefix').'organisations');
@@ -68,7 +68,7 @@ class CreateLaravelCrmTables extends Migration
             $table->string('external_id');
             $table->string('address');
             $table->boolean('primary')->default(false);
-            $table->enum('type', ['work','home','other'])->default('work')->nullable();
+            $table->enum('type', ['work', 'home', 'other'])->default('work')->nullable();
             $table->morphs('emailable');
             $table->unsignedBigInteger('user_created_id')->nullable();
             $table->foreign('user_created_id')->references('id')->on('users');
@@ -86,7 +86,7 @@ class CreateLaravelCrmTables extends Migration
             $table->string('external_id');
             $table->string('number');
             $table->boolean('primary')->default(false);
-            $table->enum('type', ['work','home','mobile','fax','other'])->default('work')->nullable();
+            $table->enum('type', ['work', 'home', 'mobile', 'fax', 'other'])->default('work')->nullable();
             $table->morphs('phoneable');
             $table->unsignedBigInteger('user_created_id')->nullable();
             $table->foreign('user_created_id')->references('id')->on('users');
@@ -150,14 +150,14 @@ class CreateLaravelCrmTables extends Migration
             $table->string('title');
             $table->text('description')->nullable();
             $table->integer('amount')->nullable();
-            $table->string("currency", 3)->default("USD");
+            $table->string('currency', 3)->default('USD');
             $table->unsignedSmallInteger('lead_status_id')->index()->nullable();
             $table->foreign('lead_status_id')->references('id')->on(config('laravel-crm.db_table_prefix').'lead_statuses');
             $table->unsignedBigInteger('lead_source_id')->index()->nullable();
             $table->foreign('lead_source_id')->references('id')->on(config('laravel-crm.db_table_prefix').'lead_sources');
-            $table->boolean("qualified")->default(false);
+            $table->boolean('qualified')->default(false);
             $table->datetime('expected_close')->nullable();
-            $table->datetime("converted_at")->nullable();
+            $table->datetime('converted_at')->nullable();
             $table->unsignedBigInteger('user_created_id')->nullable();
             $table->foreign('user_created_id')->references('id')->on('users');
             $table->unsignedBigInteger('user_updated_id')->nullable();
@@ -185,11 +185,11 @@ class CreateLaravelCrmTables extends Migration
             $table->string('title');
             $table->text('description')->nullable();
             $table->integer('amount')->nullable();
-            $table->string("currency", 3)->default("USD");
-            $table->boolean("qualified")->default(false);
+            $table->string('currency', 3)->default('USD');
+            $table->boolean('qualified')->default(false);
             $table->datetime('expected_close')->nullable();
             $table->datetime('closed_at')->nullable();
-            $table->enum('closed_status', ['won','lost'])->nullable();
+            $table->enum('closed_status', ['won', 'lost'])->nullable();
             $table->unsignedBigInteger('user_created_id')->nullable();
             $table->foreign('user_created_id')->references('id')->on('users');
             $table->unsignedBigInteger('user_updated_id')->nullable();
@@ -253,33 +253,33 @@ class CreateLaravelCrmTables extends Migration
             $table->timestamps();
             $table->unique(['crm_team_id', 'user_id']);
         });
-         Schema::create('crm_team_invitations', function (Blueprint $table) {
+        Schema::create('crm_team_invitations', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('crm_team_id');
             $table->foreign('crm_team_id')->references('id')->on('crm_teams');
-            $table->string('email'); 
+            $table->string('email');
             $table->timestamps();
             $table->unique(['crm_team_id', 'email']);
-        }); 
+        });
         Schema::create(config('laravel-crm.db_table_prefix').'activities', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('external_id'); 
+            $table->string('external_id');
             $table->string('log_name')->default('default');
             $table->string('description')->nullable();
             $table->nullableMorphs('causeable');
             $table->nullableMorphs('timelineable');
-            $table->nullableMorphs('recordable'); 
-            $table->string('event')->nullable();        
+            $table->nullableMorphs('recordable');
+            $table->string('event')->nullable();
             $table->json('properties')->nullable();
             $table->json('modified')->nullable();
-            $table->string('ip_address', 64)->nullable();  
+            $table->string('ip_address', 64)->nullable();
             $table->string('url')->nullable();
-            $table->string('user_agent')->nullable();  
+            $table->string('user_agent')->nullable();
             $table->timestamps();
         });
         Schema::create(config('laravel-crm.db_table_prefix').'notes', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('external_id'); 
+            $table->string('external_id');
             $table->text('content');
             $table->morphs('noteable');
             $table->boolean('pinned')->default(false);
@@ -294,25 +294,22 @@ class CreateLaravelCrmTables extends Migration
             $table->softDeletes();
             $table->timestamps();
         });
-        if (! Schema::hasColumn('users', 'crm_access'))
-                {
-                    Schema::table('users', function (Blueprint $table) {
-                        $table->boolean("crm_access")->default(false);
-                    });
-                } 
-        if (! Schema::hasColumn('users', 'last_online_at'))
-        {
+        if (! Schema::hasColumn('users', 'crm_access')) {
             Schema::table('users', function (Blueprint $table) {
-                $table->timestamp("last_online_at")->nullable();
+                $table->boolean('crm_access')->default(false);
             });
-        }  
-        if (! Schema::hasColumn('users', 'current_crm_team_id'))
-        {
-           Schema::table('users', function (Blueprint $table) {
+        }
+        if (! Schema::hasColumn('users', 'last_online_at')) {
+            Schema::table('users', function (Blueprint $table) {
+                $table->timestamp('last_online_at')->nullable();
+            });
+        }
+        if (! Schema::hasColumn('users', 'current_crm_team_id')) {
+            Schema::table('users', function (Blueprint $table) {
                 $table->unsignedBigInteger('current_crm_team_id')->nullable()->index();
                 $table->foreign('current_crm_team_id')->references('id')->on('crm_teams');
-           });
-        } 
+            });
+        }
     }
 
     /**

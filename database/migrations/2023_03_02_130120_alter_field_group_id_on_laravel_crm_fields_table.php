@@ -14,7 +14,7 @@ class AlterFieldGroupIdOnLaravelCrmFieldsTable extends Migration
     public function up()
     {
         Schema::table(config('laravel-crm.db_table_prefix').'fields', function (Blueprint $table) {
-              $table->unsignedBigInteger('field_group_id')->nullable()->change();
+            $table->unsignedBigInteger('field_group_id')->nullable()->change();
         });
     }
 

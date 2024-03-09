@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddContactToLaravelCrmAddressesTable extends Migration
+class AddDefaultToLaravelCrmTaxRatesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class AddContactToLaravelCrmAddressesTable extends Migration
      */
     public function up()
     {
-        Schema::table(config('laravel-crm.db_table_prefix').'addresses', function (Blueprint $table) {
-            $table->string('contact')->after('name')->nullable();
+        Schema::table(config('laravel-crm.db_table_prefix').'tax_rates', function (Blueprint $table) {
+            $table->boolean('default')->after('rate')->default(false);
+
         });
     }
 
@@ -25,9 +26,9 @@ class AddContactToLaravelCrmAddressesTable extends Migration
      */
     public function down()
     {
-        Schema::table(config('laravel-crm.db_table_prefix').'addresses', function (Blueprint $table) {
+        Schema::table(config('laravel-crm.db_table_prefix').'tax_rates', function (Blueprint $table) {
             $table->dropColumn([
-                'contact',
+                'default',
             ]);
         });
     }

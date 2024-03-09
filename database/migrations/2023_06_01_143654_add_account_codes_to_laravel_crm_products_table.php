@@ -16,7 +16,7 @@ class AddAccountCodesToLaravelCrmProductsTable extends Migration
         Schema::table(config('laravel-crm.db_table_prefix').'products', function (Blueprint $table) {
             $table->string('purchase_account')->after('code')->nullable();
             $table->string('sales_account')->after('code')->nullable();
-        });  
+        });
     }
 
     /**
@@ -27,10 +27,10 @@ class AddAccountCodesToLaravelCrmProductsTable extends Migration
     public function down()
     {
         Schema::table(config('laravel-crm.db_table_prefix').'products', function (Blueprint $table) {
-             $table->dropColumn([
+            $table->dropColumn([
                 'purchase_account',
-                'sales_account'
-             ]);
+                'sales_account',
+            ]);
         });
     }
 }

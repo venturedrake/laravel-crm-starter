@@ -14,11 +14,11 @@ class ChangeMorphColNamesOnLaravelCrmNotesTable extends Migration
     public function up()
     {
         Schema::table(config('laravel-crm.db_table_prefix').'notes', function (Blueprint $table) {
-            if (! Schema::hasColumn(config('laravel-crm.db_table_prefix').'notes', 'noteable_type')){
+            if (! Schema::hasColumn(config('laravel-crm.db_table_prefix').'notes', 'noteable_type')) {
                 $table->renameColumn(config('laravel-crm.db_table_prefix').'noteable_type', 'noteable_type');
             }
-            
-            if (! Schema::hasColumn(config('laravel-crm.db_table_prefix').'notes', 'noteable_id')){
+
+            if (! Schema::hasColumn(config('laravel-crm.db_table_prefix').'notes', 'noteable_id')) {
                 $table->renameColumn(config('laravel-crm.db_table_prefix').'noteable_id', 'noteable_id');
             }
         });

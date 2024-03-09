@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLaravelCrmInvoicesTable extends Migration
+class CreateLaravelCrmPurchaseOrdersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateLaravelCrmInvoicesTable extends Migration
      */
     public function up()
     {
-        Schema::create(config('laravel-crm.db_table_prefix').'invoices', function (Blueprint $table) {
+        Schema::create(config('laravel-crm.db_table_prefix').'purchase_orders', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('external_id');
             $table->unsignedBigInteger('team_id')->index()->nullable();
@@ -23,23 +23,20 @@ class CreateLaravelCrmInvoicesTable extends Migration
             $table->foreign('person_id')->references('id')->on(config('laravel-crm.db_table_prefix').'people');
             $table->unsignedBigInteger('organisation_id')->index()->nullable();
             $table->foreign('organisation_id')->references('id')->on(config('laravel-crm.db_table_prefix').'organisations');
-            $table->text('description')->nullable();
             $table->string('reference')->nullable();
-            $table->string('invoice_id');
-            $table->unsignedBigInteger('invoice_number');
+            $table->string('purchase_order_id');
+            $table->string('prefix')->nullable();
+            $table->unsignedBigInteger('number');
             $table->date('issue_date')->nullable();
-            $table->date('due_date')->nullable();
+            $table->date('delivery_date')->nullable();
             $table->string('currency', 3)->default('USD');
             $table->integer('subtotal')->nullable();
             $table->integer('discount')->nullable();
             $table->integer('tax')->nullable();
             $table->integer('adjustments')->nullable();
             $table->integer('total')->nullable();
-            $table->text('terms')->nullable();
+            $table->text('delivery_instructions')->nullable();
             $table->boolean('sent')->default(false);
-            $table->integer('amount_due')->nullable();
-            $table->integer('amount_paid')->nullable();
-            $table->datetime('fully_paid_at')->nullable();
             $table->unsignedBigInteger('user_created_id')->nullable();
             $table->foreign('user_created_id')->references('id')->on('users');
             $table->unsignedBigInteger('user_updated_id')->nullable();
@@ -64,6 +61,6 @@ class CreateLaravelCrmInvoicesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(config('laravel-crm.db_table_prefix').'invoices');
+        Schema::dropIfExists(config('laravel-crm.db_table_prefix').'purchase_orders');
     }
 }

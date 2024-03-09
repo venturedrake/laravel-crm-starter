@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class AddTeamsFields extends Migration
 {
@@ -36,7 +36,7 @@ class AddTeamsFields extends Migration
 
         Schema::table($tableNames['model_has_permissions'], function (Blueprint $table) use ($tableNames, $columnNames) {
             if (! Schema::hasColumn($tableNames['model_has_permissions'], $columnNames['team_foreign_key'])) {
-                $table->unsignedBigInteger($columnNames['team_foreign_key'])->default('1');;
+                $table->unsignedBigInteger($columnNames['team_foreign_key'])->default('1');
                 $table->index($columnNames['team_foreign_key'], 'model_has_permissions_team_foreign_key_index');
 
                 $table->dropPrimary();
@@ -47,7 +47,7 @@ class AddTeamsFields extends Migration
 
         Schema::table($tableNames['model_has_roles'], function (Blueprint $table) use ($tableNames, $columnNames) {
             if (! Schema::hasColumn($tableNames['model_has_roles'], $columnNames['team_foreign_key'])) {
-                $table->unsignedBigInteger($columnNames['team_foreign_key'])->default('1');;
+                $table->unsignedBigInteger($columnNames['team_foreign_key'])->default('1');
                 $table->index($columnNames['team_foreign_key'], 'model_has_roles_team_foreign_key_index');
 
                 $table->dropPrimary();

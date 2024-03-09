@@ -17,7 +17,7 @@ class AddNameToLaravelCrmClientsTable extends Migration
             $table->string('name')->after('clientable_id')->nullable();
             $table->string('clientable_type')->nullable()->change();
             $table->unsignedBigInteger('clientable_id')->nullable()->change();
-        });  
+        });
     }
 
     /**

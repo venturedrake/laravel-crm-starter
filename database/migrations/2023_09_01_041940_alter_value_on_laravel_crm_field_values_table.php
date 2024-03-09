@@ -14,7 +14,7 @@ class AlterValueOnLaravelCrmFieldValuesTable extends Migration
     public function up()
     {
         Schema::table(config('laravel-crm.db_table_prefix').'field_values', function (Blueprint $table) {
-              $table->text('value')->nullable()->change();
+            $table->text('value')->nullable()->change();
         });
     }
 

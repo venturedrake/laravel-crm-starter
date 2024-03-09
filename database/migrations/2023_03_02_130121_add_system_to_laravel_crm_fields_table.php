@@ -15,11 +15,11 @@ class AddSystemToLaravelCrmFieldsTable extends Migration
     {
         Schema::table(config('laravel-crm.db_table_prefix').'fields', function (Blueprint $table) {
             $table->boolean('system')->after('validation')->default(false);
-        });  
-        
+        });
+
         Schema::table(config('laravel-crm.db_table_prefix').'field_groups', function (Blueprint $table) {
             $table->boolean('system')->after('handle')->default(false);
-        });  
+        });
     }
 
     /**
@@ -32,7 +32,7 @@ class AddSystemToLaravelCrmFieldsTable extends Migration
         Schema::table(config('laravel-crm.db_table_prefix').'fields', function (Blueprint $table) {
             $table->dropColumn(['system']);
         });
-        
+
         Schema::table(config('laravel-crm.db_table_prefix').'field_groups', function (Blueprint $table) {
             $table->dropColumn(['system']);
         });

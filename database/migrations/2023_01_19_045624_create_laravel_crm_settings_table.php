@@ -17,11 +17,11 @@ class CreateLaravelCrmSettingsTable extends Migration
             Schema::create(
                 config('laravel-crm.db_table_prefix').'settings',
                 function (Blueprint $table) {
-                $table->bigIncrements('id');
-                $table->string('name');
-                $table->string('value');
-                $table->timestamps();
-            }
+                    $table->bigIncrements('id');
+                    $table->string('name');
+                    $table->string('value');
+                    $table->timestamps();
+                }
             );
         }
     }

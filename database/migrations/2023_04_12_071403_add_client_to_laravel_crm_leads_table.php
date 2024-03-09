@@ -15,7 +15,7 @@ class AddClientToLaravelCrmLeadsTable extends Migration
     {
         Schema::table(config('laravel-crm.db_table_prefix').'leads', function (Blueprint $table) {
             $table->foreignIdFor(\VentureDrake\LaravelCrm\Models\Client::class)->after('organisation_id')->nullable();
-        });  
+        });
     }
 
     /**
@@ -26,7 +26,7 @@ class AddClientToLaravelCrmLeadsTable extends Migration
     public function down()
     {
         Schema::table(config('laravel-crm.db_table_prefix').'leads', function (Blueprint $table) {
-             $table->dropColumn('client_id');
+            $table->dropColumn('client_id');
         });
     }
 }

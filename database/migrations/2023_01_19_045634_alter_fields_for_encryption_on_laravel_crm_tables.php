@@ -25,7 +25,7 @@ class AlterFieldsForEncryptionOnLaravelCrmTables extends Migration
             Schema::table(config('laravel-crm.db_table_prefix').'organisations', function (Blueprint $table) {
                 $table->string('name', 1000)->nullable()->change();
             });
-            
+
             Schema::table(config('laravel-crm.db_table_prefix').'addresses', function (Blueprint $table) {
                 $table->string('address', 1000)->nullable()->change();
                 $table->string('line1', 1000)->change();

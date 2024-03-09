@@ -14,9 +14,9 @@ class AddPrefixToLaravelCrmDeliveriesTable extends Migration
     public function up()
     {
         Schema::table(config('laravel-crm.db_table_prefix').'deliveries', function (Blueprint $table) {
-             $table->string('delivery_id')->after('order_id')->nullable();
-             $table->string('prefix')->after('delivery_id')->nullable();
-             $table->integer('number')->nullable()->after('prefix');
+            $table->string('delivery_id')->after('order_id')->nullable();
+            $table->string('prefix')->after('delivery_id')->nullable();
+            $table->integer('number')->nullable()->after('prefix');
         });
     }
 
@@ -31,8 +31,8 @@ class AddPrefixToLaravelCrmDeliveriesTable extends Migration
             $table->dropColumn([
                 'delivery_id',
                 'prefix',
-                'number'
-            ]);   
+                'number',
+            ]);
         });
     }
 }

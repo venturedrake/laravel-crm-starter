@@ -31,8 +31,8 @@ class AddPrefixToLaravelCrmQuotesTable extends Migration
             $table->dropColumn([
                 'quote_id',
                 'prefix',
-                'number'
-            ]);     
+                'number',
+            ]);
         });
     }
 }

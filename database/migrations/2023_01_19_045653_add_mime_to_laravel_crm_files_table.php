@@ -15,7 +15,7 @@ class AddMimeToLaravelCrmFilesTable extends Migration
     {
         Schema::table(config('laravel-crm.db_table_prefix').'files', function (Blueprint $table) {
             $table->string('mime')->after('filesize')->nullable();
-        });  
+        });
     }
 
     /**

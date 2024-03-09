@@ -33,7 +33,7 @@ class AddDeliveryDatesToLaravelCrmDeliveriesTable extends Migration
                 'delivery_initiated',
                 'delivery_shipped',
                 'delivery_expected',
-                'delivered_at'
+                'delivered_at',
             ]);
         });
     }

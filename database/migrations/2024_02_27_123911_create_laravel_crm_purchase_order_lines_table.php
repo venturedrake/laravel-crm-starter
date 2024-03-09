@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLaravelCrmQuoteProductsTable extends Migration
+class CreateLaravelCrmPurchaseOrderLinesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,17 @@ class CreateLaravelCrmQuoteProductsTable extends Migration
      */
     public function up()
     {
-        Schema::create(config('laravel-crm.db_table_prefix').'quote_products', function (Blueprint $table) {
+        Schema::create(config('laravel-crm.db_table_prefix').'purchase_order_lines', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('external_id');
             $table->unsignedBigInteger('team_id')->index()->nullable();
-            $table->unsignedBigInteger('quote_id')->index();
+            $table->unsignedBigInteger('purchase_order_id')->index();
+            $table->foreign('purchase_order_id')->references('id')->on(config('laravel-crm.db_table_prefix').'purchase_orders');
             $table->unsignedBigInteger('product_id')->index()->nullable();
+            $table->foreign('product_id')->references('id')->on(config('laravel-crm.db_table_prefix').'products');
             $table->unsignedBigInteger('product_variation_id')->index()->nullable();
+            $table->foreign('product_variation_id')->references('id')->on(config('laravel-crm.db_table_prefix').'product_variations');
+            $table->text('description')->nullable();
             $table->integer('price')->nullable();
             $table->integer('quantity')->nullable();
             $table->decimal('tax_rate')->nullable();
@@ -38,6 +42,6 @@ class CreateLaravelCrmQuoteProductsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(config('laravel-crm.db_table_prefix').'quote_products');
+        Schema::dropIfExists(config('laravel-crm.db_table_prefix').'purchase_order_lines');
     }
 }

@@ -21,7 +21,7 @@ class CreateLaravelCrmOrganisationTypesTable extends Migration
             $table->timestamps();
             $table->softDeletes();
         });
-        
+
         Schema::table(config('laravel-crm.db_table_prefix').'organisations', function (Blueprint $table) {
             $table->unsignedBigInteger('organisation_type_id')->index()->nullable();
         });
@@ -35,9 +35,9 @@ class CreateLaravelCrmOrganisationTypesTable extends Migration
     public function down()
     {
         Schema::table(config('laravel-crm.db_table_prefix').'organisations', function (Blueprint $table) {
-                $table->dropColumn(['organisation_type_id']);
+            $table->dropColumn(['organisation_type_id']);
         });
-  
+
         Schema::dropIfExists(config('laravel-crm.db_table_prefix').'organisation_types');
     }
 }

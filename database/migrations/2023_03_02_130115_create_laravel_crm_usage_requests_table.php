@@ -15,7 +15,7 @@ class CreateLaravelCrmUsageRequestsTable extends Migration
     {
         Schema::create(config('laravel-crm.db_table_prefix').'usage_requests', function (Blueprint $table) {
             $table->id();
-            $table->string('host'); 
+            $table->string('host');
             $table->string('path');
             $table->string('url');
             $table->string('method');

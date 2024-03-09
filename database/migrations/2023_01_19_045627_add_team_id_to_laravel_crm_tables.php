@@ -88,11 +88,11 @@ class AddTeamIdToLaravelCrmTables extends Migration
         Schema::table(config('laravel-crm.db_table_prefix').'settings', function (Blueprint $table) {
             $table->dropColumn(['team_id']);
         });
-        
+
         Schema::table(config('laravel-crm.db_table_prefix').'organisations', function (Blueprint $table) {
             $table->dropColumn(['team_id']);
         });
-        
+
         Schema::table(config('laravel-crm.db_table_prefix').'people', function (Blueprint $table) {
             $table->dropColumn(['team_id']);
         });
@@ -116,11 +116,11 @@ class AddTeamIdToLaravelCrmTables extends Migration
         Schema::table(config('laravel-crm.db_table_prefix').'lead_statuses', function (Blueprint $table) {
             $table->dropColumn(['team_id']);
         });
-        
+
         Schema::table(config('laravel-crm.db_table_prefix').'lead_sources', function (Blueprint $table) {
             $table->dropColumn(['team_id']);
         });
-        
+
         Schema::table(config('laravel-crm.db_table_prefix').'deals', function (Blueprint $table) {
             $table->dropColumn(['team_id']);
         });

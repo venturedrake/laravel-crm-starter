@@ -14,7 +14,7 @@ class AddPhoneToLaravelCrmAddressesTable extends Migration
     public function up()
     {
         Schema::table(config('laravel-crm.db_table_prefix').'addresses', function (Blueprint $table) {
-              $table->string('phone')->after('contact')->nullable();
+            $table->string('phone')->after('contact')->nullable();
         });
     }
 
@@ -27,7 +27,7 @@ class AddPhoneToLaravelCrmAddressesTable extends Migration
     {
         Schema::table(config('laravel-crm.db_table_prefix').'addresses', function (Blueprint $table) {
             $table->dropColumn([
-               'phone',
+                'phone',
             ]);
         });
     }

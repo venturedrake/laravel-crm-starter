@@ -6,20 +6,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Lab404\AuthChecker\Interfaces\HasLoginsAndDevicesInterface;
+use Lab404\AuthChecker\Models\HasLoginsAndDevices;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 use VentureDrake\LaravelCrm\Traits\HasCrmAccess;
 use VentureDrake\LaravelCrm\Traits\HasCrmTeams;
-use Lab404\AuthChecker\Models\HasLoginsAndDevices;
-use Lab404\AuthChecker\Interfaces\HasLoginsAndDevicesInterface;
 
 class User extends Authenticatable implements HasLoginsAndDevicesInterface
 {
     use HasApiTokens, HasFactory, Notifiable;
-    use HasRoles;
     use HasCrmAccess;
     use HasCrmTeams;
     use HasLoginsAndDevices;
+    use HasRoles;
 
     /**
      * The attributes that are mass assignable.

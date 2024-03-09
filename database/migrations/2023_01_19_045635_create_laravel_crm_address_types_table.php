@@ -37,7 +37,7 @@ class CreateLaravelCrmAddressTypesTable extends Migration
         Schema::table(config('laravel-crm.db_table_prefix').'addresses', function (Blueprint $table) {
             $table->dropColumn(['address_type_id']);
         });
-        
+
         Schema::dropIfExists(config('laravel-crm.db_table_prefix').'address_types');
     }
 }

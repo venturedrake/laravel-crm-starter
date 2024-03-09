@@ -21,7 +21,7 @@ class CreateLaravelCrmFieldModelsTable extends Migration
             $table->foreign('field_id')->references('id')->on(config('laravel-crm.db_table_prefix').'fields');
             $table->string('model');
             $table->timestamps();
-            $table->softDeletes();      
+            $table->softDeletes();
         });
     }
 

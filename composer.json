@@ -32,14 +32,14 @@
         }
     ],
     "require": {
-        "php": "^8.0.2",
+        "php": "^8.0",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
         "symfony/http-client": "^6.3",
         "symfony/mailgun-mailer": "^6.3",
-        "venturedrake/laravel-crm": "^0.19.0"
+        "venturedrake/laravel-crm": "^1.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

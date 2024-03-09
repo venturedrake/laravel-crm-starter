@@ -14,25 +14,25 @@ class AddLabelTypeToLaravelCrmFieldsTable extends Migration
     public function up()
     {
         Schema::table(config('laravel-crm.db_table_prefix').'fields', function (Blueprint $table) {
-             $table->enum('type', [
+            $table->enum('type', [
                 'text',
                 'textarea',
                 'select',
                 'select_multiple',
                 'checkbox',
                 'radio',
-                'date'
-             ])->after('team_id')->default('text');
-             $table->string('handle')->after('name')->nullable();
-             $table->boolean('required')->after('handle')->default(false);
-             $table->string('default')->after('required')->nullable();
-             $table->json('config')->after('default')->nullable();
-             $table->json('validation')->after('config')->nullable();
-            
-             $table->dropColumn([
+                'date',
+            ])->after('team_id')->default('text');
+            $table->string('handle')->after('name')->nullable();
+            $table->boolean('required')->after('handle')->default(false);
+            $table->string('default')->after('required')->nullable();
+            $table->json('config')->after('default')->nullable();
+            $table->json('validation')->after('config')->nullable();
+
+            $table->dropColumn([
                 'model',
-                'key'
-             ]);
+                'key',
+            ]);
         });
     }
 
@@ -50,9 +50,9 @@ class AddLabelTypeToLaravelCrmFieldsTable extends Migration
                 'required',
                 'default',
                 'config',
-                'validation'
+                'validation',
             ]);
-            
+
             $table->string('model')->nullable();
             $table->string('key')->nullable();
         });

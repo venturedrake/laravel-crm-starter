@@ -29,7 +29,7 @@ class CreateLaravelCrmInvoiceLinesTable extends Migration
             $table->decimal('tax_rate')->nullable();
             $table->integer('tax_amount')->nullable();
             $table->integer('amount')->nullable();
-            $table->string("currency", 3)->default("USD");
+            $table->string('currency', 3)->default('USD');
             $table->timestamps();
             $table->softDeletes();
         });

@@ -22,7 +22,7 @@ class CreateLaravelCrmProductPricesTable extends Migration
             $table->integer('unit_price')->nullable();
             $table->integer('cost_per_unit')->nullable();
             $table->integer('direct_cost')->nullable();
-            $table->string("currency", 3)->default("USD");
+            $table->string('currency', 3)->default('USD');
             $table->timestamps();
             $table->softDeletes();
         });

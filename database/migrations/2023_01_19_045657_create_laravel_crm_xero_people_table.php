@@ -19,8 +19,8 @@ class CreateLaravelCrmXeroPeopleTable extends Migration
             $table->unsignedBigInteger('team_id')->index()->nullable();
             $table->foreignIdFor(\VentureDrake\LaravelCrm\Models\Person::class);
             $table->string('contact_id')->nullable();
-            $table->string('first_name')->nullable(); 
-            $table->string('last_name')->nullable(); 
+            $table->string('first_name')->nullable();
+            $table->string('last_name')->nullable();
             $table->string('email')->nullable();
             $table->boolean('is_primary')->default(false);
             $table->timestamps();

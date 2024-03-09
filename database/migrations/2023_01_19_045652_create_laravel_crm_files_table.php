@@ -19,8 +19,8 @@ class CreateLaravelCrmFilesTable extends Migration
             $table->unsignedBigInteger('team_id')->index()->nullable();
             $table->morphs('fileable');
             $table->string('file');
-            $table->string('name')->nullable();;
-            $table->string('title')->nullable();;
+            $table->string('name')->nullable();
+            $table->string('title')->nullable();
             $table->string('format')->nullable();
             $table->string('filesize')->nullable();
             $table->string('disk')->default('local');
@@ -33,7 +33,7 @@ class CreateLaravelCrmFilesTable extends Migration
             $table->unsignedBigInteger('user_restored_id')->nullable();
             $table->foreign('user_restored_id')->references('id')->on('users');
             $table->timestamps();
-            $table->softDeletes();      
+            $table->softDeletes();
         });
     }
 
