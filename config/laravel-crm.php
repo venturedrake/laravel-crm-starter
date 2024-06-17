@@ -190,4 +190,20 @@ return [
     */
 
     'update_notifications' => env('LARAVEL_CRM_UPDATE_NOTIFICATIONS', true),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Models with Global
+    |--------------------------------------------------------------------------
+    |
+    | With multi-tenant support, you can have model rows that are global, using
+    | a "global" column in the table. eg. settings
+    |
+    |
+    */
+
+    'model_with_global' => [
+        'settings',
+    ],
+    
 ];
