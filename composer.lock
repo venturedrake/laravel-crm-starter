@@ -7806,16 +7806,16 @@
         },
         {
             "name": "venturedrake/laravel-crm",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/venturedrake/laravel-crm.git",
-                "reference": "df3cbeee38263aa20d827a11664e7eb5eb4e4677"
+                "reference": "ae1ef7b82dae21105bc6ba3645f7ee98f241d8dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/venturedrake/laravel-crm/zipball/df3cbeee38263aa20d827a11664e7eb5eb4e4677",
-                "reference": "df3cbeee38263aa20d827a11664e7eb5eb4e4677",
+                "url": "https://api.github.com/repos/venturedrake/laravel-crm/zipball/ae1ef7b82dae21105bc6ba3645f7ee98f241d8dd",
+                "reference": "ae1ef7b82dae21105bc6ba3645f7ee98f241d8dd",
                 "shasum": ""
             },
             "require": {
@@ -7905,7 +7905,7 @@
             ],
             "support": {
                 "issues": "https://github.com/venturedrake/laravel-crm/issues",
-                "source": "https://github.com/venturedrake/laravel-crm/tree/1.2.0"
+                "source": "https://github.com/venturedrake/laravel-crm/tree/1.2.1"
             },
             "funding": [
                 {
@@ -7913,7 +7913,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-08-24T13:16:22+00:00"
+            "time": "2024-08-24T13:59:42+00:00"
         },
         {
             "name": "venturedrake/laravel-encryptable",
