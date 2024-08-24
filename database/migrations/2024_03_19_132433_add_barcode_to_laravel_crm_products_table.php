@@ -15,8 +15,8 @@ class AddBarcodeToLaravelCrmProductsTable extends Migration
     {
         Schema::table(config('laravel-crm.db_table_prefix').'products', function (Blueprint $table) {
             $table->string('barcode')->after('code')->nullable();
-     
-        });  
+
+        });
     }
 
     /**
@@ -27,9 +27,9 @@ class AddBarcodeToLaravelCrmProductsTable extends Migration
     public function down()
     {
         Schema::table(config('laravel-crm.db_table_prefix').'products', function (Blueprint $table) {
-             $table->dropColumn([
+            $table->dropColumn([
                 'barcode',
-             ]);
+            ]);
         });
     }
 }

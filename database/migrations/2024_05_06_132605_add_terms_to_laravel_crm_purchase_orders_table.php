@@ -27,8 +27,8 @@ class AddTermsToLaravelCrmPurchaseOrdersTable extends Migration
     {
         Schema::table(config('laravel-crm.db_table_prefix').'orders', function (Blueprint $table) {
             $table->dropColumn([
-                'terms'     
-            ]);     
+                'terms',
+            ]);
         });
     }
 }

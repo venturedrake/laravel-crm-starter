@@ -205,5 +205,5 @@ return [
     'model_with_global' => [
         'settings',
     ],
-    
+
 ];

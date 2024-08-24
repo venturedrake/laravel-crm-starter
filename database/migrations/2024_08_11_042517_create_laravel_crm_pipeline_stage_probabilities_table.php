@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLaravelCrmFieldOptionsTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,15 @@ class CreateLaravelCrmFieldOptionsTable extends Migration
      */
     public function up()
     {
-        Schema::create(config('laravel-crm.db_table_prefix').'field_options', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::create(config('laravel-crm.db_table_prefix').'pipeline_stage_probabilities', function (Blueprint $table) {
+            $table->id();
             $table->string('external_id');
             $table->unsignedBigInteger('team_id')->index()->nullable();
-            $table->foreignIdFor(\VentureDrake\LaravelCrm\Models\Field::class);
-            $table->string('value')->nullable();
-            $table->string('label')->nullable();
-            $table->bigInteger('order')->nullable();
+            $table->string('name');
+            $table->unsignedTinyInteger('percent');
+            $table->tinyInteger('limit')->nullable();
+            $table->boolean('archive')->default(false);
+            $table->timestamp('archived_at')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -33,6 +34,6 @@ class CreateLaravelCrmFieldOptionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(config('laravel-crm.db_table_prefix').'field_options');
+        Schema::dropIfExists(config('laravel-crm.db_table_prefix').'pipeline_stage_probabilities');
     }
-}
+};

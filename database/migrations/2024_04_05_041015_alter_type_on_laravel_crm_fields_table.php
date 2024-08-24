@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
 
 class AlterTypeOnLaravelCrmFieldsTable extends Migration
 {
@@ -13,7 +11,7 @@ class AlterTypeOnLaravelCrmFieldsTable extends Migration
      */
     public function up()
     {
-        DB::statement("ALTER TABLE ".config('laravel-crm.db_table_prefix')."fields CHANGE COLUMN type type ENUM('text','textarea','select','select_multiple','checkbox','checkbox_multiple', 'radio','date') NOT NULL DEFAULT 'text'");
+        DB::statement('ALTER TABLE '.config('laravel-crm.db_table_prefix')."fields CHANGE COLUMN type type ENUM('text','textarea','select','select_multiple','checkbox','checkbox_multiple', 'radio','date') NOT NULL DEFAULT 'text'");
     }
 
     /**
@@ -23,6 +21,6 @@ class AlterTypeOnLaravelCrmFieldsTable extends Migration
      */
     public function down()
     {
-        DB::statement("ALTER TABLE ".config('laravel-crm.db_table_prefix')."fields CHANGE COLUMN type type ENUM('text','textarea','select','select_multiple','checkbox', 'radio','date') NOT NULL DEFAULT 'text'");
+        DB::statement('ALTER TABLE '.config('laravel-crm.db_table_prefix')."fields CHANGE COLUMN type type ENUM('text','textarea','select','select_multiple','checkbox', 'radio','date') NOT NULL DEFAULT 'text'");
     }
 }

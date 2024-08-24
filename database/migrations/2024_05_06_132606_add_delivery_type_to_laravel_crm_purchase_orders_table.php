@@ -15,7 +15,7 @@ class AddDeliveryTypeToLaravelCrmPurchaseOrdersTable extends Migration
     {
         Schema::table(config('laravel-crm.db_table_prefix').'purchase_orders', function (Blueprint $table) {
             $table->enum('delivery_type', ['deliver', 'pickup'])->after('total')->default('deliver');
-        });  
+        });
     }
 
     /**
@@ -26,9 +26,9 @@ class AddDeliveryTypeToLaravelCrmPurchaseOrdersTable extends Migration
     public function down()
     {
         Schema::table(config('laravel-crm.db_table_prefix').'purchase_orders', function (Blueprint $table) {
-             $table->dropColumn([
+            $table->dropColumn([
                 'delivery_type',
-             ]);
+            ]);
         });
     }
 }

@@ -39,7 +39,7 @@
         "laravel/tinker": "^2.7",
         "symfony/http-client": "^6.3",
         "symfony/mailgun-mailer": "^6.3",
-        "venturedrake/laravel-crm": "1.1.*"
+        "venturedrake/laravel-crm": "1.2.*"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.12",
