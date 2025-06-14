@@ -39,7 +39,7 @@
         "laravel/tinker": "^2.7",
         "symfony/http-client": "^6.3",
         "symfony/mailgun-mailer": "^6.3",
-        "venturedrake/laravel-crm": "^1.0"
+        "venturedrake/laravel-crm": "@dev"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.12",
@@ -98,5 +98,11 @@
         }
     },
     "minimum-stability": "stable",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../Packages/laravel-crm"
+        }
+    ]
 }
